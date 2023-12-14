@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Movie Booking</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      background-color: #f8f8f8;
+      color: #333;
+      text-align: center;
+    }
+
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 20px 0;
+    }
+
+    form {
+      max-width: 400px;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+      color: #333;
+      font-weight: bold;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 16px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+
+    button {
+      background-color: #e44d26;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #d04121;
+    }
+
+    .error {
+      color: #e44d26;
+      margin-top: -10px;
+      margin-bottom: 10px;
+    }
+
+    footer {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 10px;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Movie Booking</h1>
+  </header>
+
+  <form id="bookingForm" action="booking.html">
+    <label for="movie">Select Movie:</label>
+    <select id="movie" name="movie" required>
+      <option value="" disabled selected>Select a movie</option>
+      <option value="movie1">KABZAA</option>
+      <option value="movie2">GHOST</option>
+      <option value="movie3">TOBY</option>
+      <option value="movie4">TIGER 3</option>
+      <option value="movie5">Super Mario-bros</option>
+      <option value="movie6">Ant man and the wasp quantumania</option>
+      <option value="movie2">JAILER</option>
+      <option value="movie2">BLUE BEETLE</option>
+    </select>
+
+    <label for="name">Your Name:</label>
+    <input type="text" id="name" name="name" required>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="tickets">Number of Tickets:</label>
+    <input type="number" id="tickets" name="tickets" min="1" required>
+
+    <p id="error-message" class="error"></p>
+
+    <button type="button" onclick="validateForm()">Book Now</button>
+  </form>
+
+  <footer>
+    &copy; 2023 Movie Booking | Designed by Your Name
+  </footer>
+
+  <script>
+    function validateForm() {
+      var movie = document.getElementById("movie").value;
+      var name = document.getElementById("name").value;
+      var email = document.getElementById("email").value;
+      var tickets = document.getElementById("tickets").value;
+
+      var errorMessage = document.getElementById("error-message");
+
+      if (movie === "" || name === "" || email === "" || tickets === "") {
+        errorMessage.textContent = "All fields are required.";
+      } else if (!validateEmail(email)) {
+        errorMessage.textContent = "Invalid email address.";
+      } else {
+        errorMessage.textContent = "";
+        document.getElementById("bookingForm").submit();
+      }
+    }
+
+    function validateEmail(email) {
+      var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      return emailRegex.test(email);
+    }
+  </script>
+
+</body>
+</html>

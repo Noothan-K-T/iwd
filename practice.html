@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Movie Booking Website</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      background-color: #f8f8f8;
+      color: #333;
+    }
+
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 20px 0;
+      text-align: center;
+    }
+
+    nav {
+      background-color: #444;
+      overflow: hidden;
+    }
+
+    nav a {
+      float: left;
+      display: block;
+      color: #f2f2f2;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      transition: background-color 0.3s;
+    }
+
+    nav a:hover {
+      background-color: #555;
+    }
+
+    section {
+      padding: 20px;
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+    }
+
+    .movie-card {
+      background-color: #fff;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      margin: 20px;
+      width: 300px;
+      transition: transform 0.3s;
+    }
+
+    .movie-card:hover {
+      transform: scale(1.05);
+    }
+
+    .movie-card img {
+      width: 100%;
+      height: 450px;
+      object-fit: cover;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .movie-card h3 {
+      padding: 15px;
+      margin: 0;
+      font-size: 1.2em;
+    }
+
+    .movie-card p {
+      padding: 0 15px 15px;
+      margin: 0;
+    }
+    .movie-card img{
+        background-position: center;
+    }
+    
+
+    .book-button {
+      background-color: #e44d26;
+      color: #fff;
+      border: none;
+      padding: 10px;
+      width: 100%;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .book-button:hover {
+      background-color: #d04121;
+    }
+
+    footer {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 10px;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Movie Booking Website</h1>
+  </header>
+
+  <nav>
+    <a href="#home">Home</a>
+    <a href="showtime.html">Showtimes</a>
+    <a href="#contact">Contact Us</a>
+    <a href="#book" style="float: right;">Book Now</a>
+  </nav>
+<form action="practice2.html">
+  <section>
+    <div class="movie-card" id="home">
+      <img src="kabzaa-4.jpg" alt="Kabzaa">
+      <h3>KABZAA</h3>
+      <p>Kabzaa (transl..Possession/Conquest) is a 2023 Indian Kannada-language period action film written and
+         directed by R. Chandru. The film features an ensemble cast of Upendra, Shiva Rajkumar, Kiccha Sudeepa,
+          Shriya Saran, Sudha, Murali Sharma, Nawab Shah and many other actors.</p>
+      <button class="book-button">Book Tickets</button>
+    </div>
+
+    <div class="movie-card">
+      <img src="ghost-2.jpg" alt="Ghost">
+      <h3>GHOST</h3>
+      <p>Ghost is a 2023 Indian Kannada-language action heist thriller film directed by M. G. Srinivas and 
+         produced by Sandesh Nagaraj under Sandesh Production. The film stars Shiva Rajkumar, Jayaram, Anupam
+         Kher, Prashant Narayanan, Satya Prakash, and Archana Jois.            </p>
+      <button class="book-button">Book Tickets</button>
+    </div>
+    <div class="movie-card">
+        <img src="tobby-1.jpg" alt="Toby">
+        <h3>TOBY</h3>
+        <p>Toby is a 2023 Indian Kannada-language action drama film directed by debutant Basil Alchalakkal 
+           and produced by Ravi Rai Kalasa. The film stars Raj B. Shetty, Samyukta Hornad, Chaitra Achar 
+           and Raj Deepak Shetty. </p>
+        <button class="book-button">Book Tickets</button>
+      </div>
+      <div class="movie-card">
+        <img src="tiger-3.jpg" alt="Tiger 3">
+        <h3>TIGER 3</h3>
+        <p>Tiger 3 is a 2023 Indian Hindi-language action thriller film directed by Maneesh Sharma and produced
+           by Aditya Chopra under Yash Raj Films. The film stars Salman Khan, Katrina Kaif and Emraan Hashmi 
+           in lead roles. A sequel to Tiger Zinda Hai (2017),</p>
+        <button class="book-button">Book Tickets</button>
+      </div>
+      <div class="movie-card">
+        <img src="super-mario.jpg" alt="Super-mario-bros">
+        <h3>Super Mario-bros</h3>
+        <p>The film features an origin story for the brothers Mario and Luigi, Italian-American plumbers who are
+             transported to an alternate world and become entangled in a battle between the Mushroom Kingdom, led
+             by Princess Peach, and the Koopas, led by Bowser.</p>
+        <button class="book-button">Book Tickets</button>
+      </div>
+      <div class="movie-card">
+        <img src="antman.jpg" alt="Antman-Quantumania">
+        <h3>Ant man and the wasp quantumania</h3>
+        <p>Ant-Man and the Wasp find themselves exploring the Quantum Realm, interacting with strange new creatures 
+            and embarking on an adventure that pushes them beyond the limits of what they thought was possible.</p>
+        <button class="book-button">Book Tickets</button>
+      </div>
+      <div class="movie-card">
+        <img src="jailer.jpg" alt="Jailer">
+        <h3>JAILER</h3>
+        <p> Muthuvel Pandian is a retired police officer who lives in Kodambakkam with his family. Muthuvel's 
+            son ACP Arjun is investigating Varman, an eccentric gangster operating from his base of operations
+             in Arakkonam, who smuggles idols of gods and sells them to buyers overseas.</p>
+        <button class="book-button">Book Tickets</button>
+      </div>
+      <div class="movie-card">
+        <img src="bluebeetle.jpg" alt="Blue Beetle">
+        <h3>BLUE BEETLE</h3>
+        <p>Xolo Maridueña as Jaime Reyes / Blue Beetle: A recent college graduate who gains superpowers when an
+             alien scarab grafts onto him, forming a powerful reconfiguring exoskeleton around his body. Belissa
+              Escobedo as Milagro Reyes, Jaime's younger sister; Adriana Barraza as Nana: Jaime's grandmother.</p>
+        <button class="book-button">Book Tickets</button>
+      </div>
+  </section>
+</form>
+  <footer>
+    &copy; 2023 Movie Booking Website |Designed by Noothan K T & Prabhat M Masali
+  </footer>
+
+</body>
+</html>
